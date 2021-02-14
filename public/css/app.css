@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap);
+body {
+  /* background-color: #f4f9f9; */
+  color: #c2b092;
+  font-family: "Comfortaa", cursive;
+}
+
+a {
+  color: #c2b092;
+  text-decoration: none;
+}
+
+a.btn {
+  background: #c2b092;
+  color: white;
+}
+
+a.btn:hover {
+  background: #dfd9d0;
+  color: white;
+}
+
+a.btn.create-btn {
+  width: 20rem;
+  margin: auto;
+  background-color: #ffda77;
+}
+
+h1.title {
+  text-align: center;
+  padding: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  /* color: #ffda77; */
+}
+
+header p {
+  color: #aee6e6;
+}
+
+nav a:hover {
+  /* background-color: transparent; */
+  color: #ffa45b;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-gap: 3rem;
+  width: 80%;
+  margin: auto;
+  /* align-items: center; */
+}
+
+.background {
+   background-image: url(waffle.jpg); 
+
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+}
+
+.list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.db-item {
+  border: 0.5px solid #c2b092;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  align-content: space-between;
+}
+
+.db-item:hover {
+  transform: scale(1.1);
+}
+
+.db-info {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
