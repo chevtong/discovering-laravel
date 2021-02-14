@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap);
+
 body {
-  /* background-color: #f4f9f9; */
   color: #c2b092;
   font-family: "Comfortaa", cursive;
 }
@@ -10,28 +10,40 @@ a {
   text-decoration: none;
 }
 
-a.btn {
+a.btn,.btn-create  {
   background: #c2b092;
   color: white;
+  border:none;
 }
 
-a.btn:hover {
+
+a.btn:hover, .btn-create:hover {
   background: #dfd9d0;
   color: white;
 }
-
-a.btn.create-btn {
-  width: 20rem;
-  margin: auto;
-  background-color: #ffda77;
+.create-btn{
+  display: grid;
+  justify-content: center;
+  margin: 1rem 0;
 }
 
+a.btn.create-btn {
+  max-width: 30rem;
+  min-width: 10rem;
+  margin: auto;
+  padding: .575rem .375rem;
+  background-color: #ffda77;
+
+  /* grid-column: 1/3; */
+}
+a.btn.create-btn:hover{
+  background-color: #ffa45b;
+}
 h1.title {
   text-align: center;
   padding: 1rem;
   text-transform: capitalize;
   font-weight: bold;
-  /* color: #ffda77; */
 }
 
 header p {
@@ -39,7 +51,6 @@ header p {
 }
 
 nav a:hover {
-  /* background-color: transparent; */
   color: #ffa45b;
 }
 
@@ -49,16 +60,15 @@ nav a:hover {
   grid-gap: 3rem;
   width: 80%;
   margin: auto;
-  /* align-items: center; */
+  align-items: center;
+
 }
 
-.background {
-   background-image: url(waffle.jpg); 
+.background img{
 
-  height: auto;
-  background-size: contain;
-  background-repeat: no-repeat;
-  /* background-position: center; */
+  max-width: 100%;
+  border-radius: 13px;
+  
 }
 
 .list {
@@ -68,7 +78,7 @@ nav a:hover {
 }
 
 .db-item {
-  border: 0.5px solid #c2b092;
+  border: 0.5px solid #e7e4de;
   border-radius: 12px;
   padding: 2rem;
   margin: 1rem;
@@ -78,10 +88,42 @@ nav a:hover {
 }
 
 .db-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .db-info {
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+/* create page css start here */
+.form-create{
+  border: 5px solid #c2b092;;
+  padding: 4rem;
+border-radius: 13px;
+}  
+
+/* show page css start here */
+.db-item-show:hover{
+  transform: none;
+}
+.btn-back, .btn-edit, .btn-delete{
+  max-width: 5rem;
+}
+.buttons-group-edit{
+
+  display: grid; 
+  grid-template-columns: auto auto auto;
+  padding: 2rem 0;
+  justify-content: space-evenly;
+}
+
+.form-delete{
+  border: none;
+  padding: none;
+}
+
+/* edit page css start here */
+.db-item-edit:hover{
+  transform: none;
 }

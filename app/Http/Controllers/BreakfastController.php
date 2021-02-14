@@ -26,7 +26,6 @@ class BreakfastController extends Controller
      */
     public function create()
     {
-        //
         return view('pages.create');
     }
 
@@ -38,27 +37,23 @@ class BreakfastController extends Controller
      */
     public function store(Request $request)
     {
-        
         $request->validate([
             'food' => 'required',
             'drink' => 'required',
         ],[
             //to change the error msg, either change in the lang folder,
             //or put another array here to overwrite the msg in different situations
-            'food.required' => 'Give me the food',
-            'drink.required' => 'Give me the drink',
+            'food.required' => 'Please enter the food',
+            'drink.required' => 'Please enter the drink',
         ]);      
 
         $newBreakfast = new Breakfasts;
-
         $newBreakfast->food = $request->food;
         $newBreakfast->drink = $request->drink;
-
         $newBreakfast->save();
 
         //redirect the page to the URL and pass the a message along with it
         return redirect('/db')->with('message', 'Submited - Thank you');
-       
     }
 
 
@@ -130,7 +125,5 @@ class BreakfastController extends Controller
 
         //redirect the page to the URL and pass the a message along with it
         return redirect('/db')->with('delete', 'The selected breakfast has been deleted.');
-
-
     }
 }

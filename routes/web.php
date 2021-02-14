@@ -14,6 +14,8 @@ use App\Http\Controllers\BreakfastController;
 |
 */
 
-
+Route::get('/', function () {
+    return redirect('/db');
+});
 
 Route::resource('/db', 'App\Http\Controllers\BreakfastController');
